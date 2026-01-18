@@ -9,7 +9,9 @@ window.addEventListener("load", fetchCurrency);
 converterForm.addEventListener("submit", convertCurrency);
 
 async function fetchCurrency(){
+    
     const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+    
     const data = await response.json();
 
     const currecyLists = Object.keys(data.rates);
@@ -17,13 +19,21 @@ async function fetchCurrency(){
     currecyLists.forEach(currency => {
 
         const option1 = document.createElement("option")
+        
         option1.value= currency;
+        
         option1.textContent = currency;
+        
         fromCurrency.appendChild(option1);
 
+
+
         const option2 = document.createElement("option")
+        
         option2.value= currency;
+        
         option2.textContent = currency;
+        
         toCurrency.appendChild(option2);
     })
 }
