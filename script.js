@@ -33,7 +33,9 @@ async function convertCurrency(e){
     e.preventDefault();
 
     const amount = parseFloat(amountInput.value);
+
     const fromCurrencyVal = fromCurrency.value;
+    
     const toCurrencyVal = toCurrency.value;
 
     if (amount < 0) {
