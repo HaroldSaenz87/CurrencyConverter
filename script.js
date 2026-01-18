@@ -29,7 +29,8 @@ async function fetchCurrency(){
 }
 
 async function convertCurrency(e){
-    e.preventDefault()
+
+    e.preventDefault();
 
     const amount = parseFloat(amountInput.value);
     const fromCurrencyVal = fromCurrency.value;
@@ -44,7 +45,7 @@ async function convertCurrency(e){
     const data = await response.json();
 
     const rate = data.rates[toCurrencyVal];
-    
+
     const convertedAmount = (amount * rate).toFixed(2);
 
     result.textContent = `${amount} ${fromCurrencyVal} = ${convertedAmount} ${toCurrencyVal}`;
