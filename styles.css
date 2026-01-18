@@ -52,8 +52,9 @@ label{
     color: var(--text-secondary);
 }
 
+
 input, select{
-    
+
     width: 100%;
     padding: 10px;
     background-color: var(--bg-input);
